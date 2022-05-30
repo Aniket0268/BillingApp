@@ -22,7 +22,7 @@ public class BillingServiceImpl implements IBillingService {
 
 		{
 			Double discountPercentage = (0.15);
-			billGgenerated = purchaseAmt - (purchaseAmt * discountPercentage);
+			billGgenerated = purchaseAmt - (((purchaseAmt-4000)*(discountPercentage))+(4000*0.1));
 
 		}
 
@@ -30,15 +30,17 @@ public class BillingServiceImpl implements IBillingService {
 
 		{
 			Double discountPercentage = (0.20);
-			billGgenerated = purchaseAmt - (purchaseAmt * discountPercentage);
+			billGgenerated = purchaseAmt - (((purchaseAmt-8000)*(discountPercentage))+(4000*0.1)+(4000*.15));
 
 		}
 
-		if (("premium").equalsIgnoreCase(customerType) && 12000 <purchaseAmt )
+		if (("premium").equalsIgnoreCase(customerType) && 12000<purchaseAmt )
 
 		{
 			Double discountPercentage = (0.30);
-		 billGgenerated = purchaseAmt - (purchaseAmt * discountPercentage);
+			billGgenerated = purchaseAmt - (((purchaseAmt-12000)*(discountPercentage))+(4000*0.1)+(4000*.15)+(4000*0.20));
+
+		
 			
 
 		}
@@ -54,7 +56,7 @@ public class BillingServiceImpl implements IBillingService {
 
 		{
 			Double discountPercentage = (0.10);
-			 billGgenerated = purchaseAmt - (purchaseAmt * discountPercentage);
+			 billGgenerated = purchaseAmt - (((purchaseAmt-5000)*(discountPercentage)));
 
 			
 
@@ -65,6 +67,7 @@ public class BillingServiceImpl implements IBillingService {
 		{
 			Double discountPercentage = (0.20);
 			billGgenerated = purchaseAmt - (purchaseAmt * discountPercentage);
+			billGgenerated = purchaseAmt - (((purchaseAmt-10000)*(discountPercentage)+(5000*0.0)+(5000*.10)));
 
 		
 
